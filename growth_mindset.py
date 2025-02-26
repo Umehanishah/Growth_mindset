@@ -2,6 +2,8 @@ import streamlit as st
 from datetime import date
 
 # Page Config
+st.title("Welcome to Growth Mindset Challenge 💪")
+
 st.set_page_config(page_title="Age Calculator", page_icon="📅")
 st.title("🎂 Age Calculator")
 
