@@ -1,16 +1,20 @@
 import streamlit as st
 from datetime import date
 
-# Page Config
-st.title("Welcome to Growth Mindset Challenge 💪")
-
+# Page Config (Must be the first Streamlit command)
 st.set_page_config(page_title="Age Calculator", page_icon="📅")
-st.title("🎂 Age Calculator")
+
+# Title
+st.title("Welcome to Growth Mindset Challenge 💪")
+st.header("🎂 Age Calculator")
+st.write("Select your Date of Birth and Calculate your current Age")
+
 
 # User Input
-st.header("Enter Your Birth Date")
+st.subheader("Enter Your Birth Date")
 birth_date = st.date_input("Select your birth date", min_value=date(1900, 1, 1), max_value=date.today())
 
+# Calculate Age
 if st.button("Calculate Age"):
     today = date.today()
     age_years = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
